@@ -49,7 +49,7 @@ app.get('/index', async (req, res) => {
         $limit: 2 // Limit the results to 5 upcoming dates (adjust as needed)
       }
     ]);
-    console.log(upcomingDates)
+    // console.log(upcomingDates)
     res.render('index', { upcomingDates });
   } catch (error) {
     res.send('Error fetching upcoming dates from the database');
@@ -251,15 +251,6 @@ app.post('/search', (req, res) => {
   
       
      // Handle search based on the Bill no. to delete
-// app.post('/delete', async(req, res) => {
-//     Bookings.find({bill:req.body.bill}, (err, data) => {
-//     if (err) {
-//       res.redirect("404");
-//     } else {
-//       res.render('deleting', { bookingregisters: data }); // Render a results page with the found data
-//     }
-//   });
-// });
 
 app.post('/delete', async (req, res) => {
   try {
