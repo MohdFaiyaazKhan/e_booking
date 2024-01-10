@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Record</title>
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/update.css">
+    <link rel="stylesheet" href="../css/results.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar"></nav>
+
+    <div class="result">
+
+        <form action="/updating" method="POST">
+                <h1 style="text-decoration: underline; font-weight: 600">Make Changes to Update</h1>
+        <table>
+            {{#each bookingregisters}}
+              <tr>
+                <th>Bill No.</th>
+                <td><input type="text" autocomplete="off" id="bill" value={{this.bill}} name="bill" style="background-color: inherit; box-shadow: none"></td>
+            </tr>
+            <tr>
+                <th>Party Name</th>
+                <td><input type="text" autocomplete="off" id="pname" value={{this.pname}} name="pname"></td>
+            </tr>
+            <tr>
+                <th>Function Name</th>
+                <td><input type="text" autocomplete="off" id="fname" value={{this.fname}} name="fname"></td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td><input type="text"    onfocus="(this.type='date')"
+      onblur="(this.type='text')" autocomplete="off" id="date" value={{this.date}} name="date"></td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td><input type="time" autocomplete="off" id="time" value={{this.time}} name="time"></td>
+            </tr>
+            <tr>
+                <th>Catogory</th>
+                <td><input type="text" autocomplete="off" id="category" value={{this.category}} name="category"></td>
+            </tr>
+            <tr>
+                <th>Phone No.</th>
+                <td><input type="number" autocomplete="off" id="ph" value={{this.ph}} name="ph"></td>
+            </tr>
+            <tr>
+                <th>Total Amount</th>
+                <td><input type="number" autocomplete="off" id="total" value={{this.total}} name="total"></td>
+            </tr>
+            <tr>
+                <th>Advance Amount</th>
+                <td><input type="number" autocomplete="off" id="adv" value={{this.adv}} name="adv"></td>
+            </tr>
+            <tr>
+                <th>Remaining Amount</th>
+                <td><input type="number" autocomplete="off" id="rem" value={{this.rem}} name="rem"></td>
+            </tr>
+
+            <br>
+
+            {{/each}}
+        </table>
+        
+      <input type="submit" class="submit-btn"></input>
+        </form>
+    </div>
+
+    <script src="../js/nav.js"></script>
+
+
+</body>
+
+</html>

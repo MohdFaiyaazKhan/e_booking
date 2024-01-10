@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Record</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/add.css">
+</head>
+
+<body>
+
+  <nav class="navbar"></nav>
+
+  <div class="add">
+    <form action="/index" method="POST">
+          <h1 style="text-decoration: underline; font-weight: 600">Add Record</h1>
+      <input type="text" autocomplete="off" id="pname" placeholder="Party name" name="pname">
+      <input type="text" autocomplete="off" id="fname" placeholder="Function name" name="fname">
+      <input type="date" autocomplete="off" id="date" placeholder="Date" name="date">
+      <input type="time" autocomplete="off" id="time" placeholder="Time" name="time">
+      <input type="number" autocomplete="off" id="bill" placeholder="Bill No." name="bill"  onblur="checkBillNumberAvailability()">
+      <div id="message"></div>
+      <input type="text" autocomplete="off" id="category" placeholder="Category" name="category">
+      <input type="number" autocomplete="off" id="ph" placeholder="Phone No." name="ph">
+      <input type="number" autocomplete="off" id="total" placeholder="Total Amount" name="total">
+      <input type="number" autocomplete="off" id="adv" placeholder="Paid Amount" name="adv">
+      <input type="number" autocomplete="off" id="rem" placeholder="Remaining Amount" name="rem">
+
+      <input type="submit" class="submit-btn" value="Add"></input>
+    </form>
+  </div>
+
+
+
+  <script src="js/nav.js"></script>
+  <script src="js/add.js"></script>
+</body>
+
+</html>
