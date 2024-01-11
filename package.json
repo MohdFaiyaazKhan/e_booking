@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js -e js,hbs",
+    "build": "echo 'No build process needed for a Node.js/Handlebars project'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
