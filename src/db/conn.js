@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(MONGODB_URI)
 
 .then(()=>{
     console.log(`connection successful`);
