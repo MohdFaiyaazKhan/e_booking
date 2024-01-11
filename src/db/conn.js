@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose.set('strictQuery', true);
-mongoose.connect("mongodb+srv://faraz:faraz@cluster0.vcjjaw3.mongodb.net/amaan?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGODB_URI)
 
 .then(()=>{
     console.log(`connection successful`);
