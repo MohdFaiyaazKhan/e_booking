@@ -23,7 +23,7 @@
     <div class="result">
 
         <form action="/updating" method="POST">
-                <h1 style="text-decoration: underline; font-weight: 600">Make Changes to Update</h1>
+                <h2 style="text-decoration: underline; font-weight: 600; color:#116A7B">Make Changes to Update</h2>
         <table>
             {{#each bookingregisters}}
               <tr>
@@ -65,7 +65,7 @@
             </tr>
             <tr>
                 <th>Remaining Amount</th>
-                <td><input type="number" autocomplete="off" id="rem" value={{this.rem}} name="rem"></td>
+                 <td><input type="number" autocomplete="off" id="rem" value={{this.rem}} name="rem" readonly></td>
             </tr>
 
             <br>
@@ -78,6 +78,25 @@
     </div>
 
     <script src="../js/nav.js"></script>
+  <script>
+    // Function to calculate and set the remaining amount based on total and adv
+    function calculateAndSetRemainingAmount() {
+        const totalAmount = parseFloat(document.getElementById('total').value) || 0;
+        const advanceAmount = parseFloat(document.getElementById('adv').value) || 0;
+        const remainingAmount = totalAmount - advanceAmount;
+        document.getElementById('rem').value = remainingAmount;
+    }
+
+    // Attach the function to the 'oninput' event of the total and adv input fields
+    document.getElementById('total').oninput = calculateAndSetRemainingAmount;
+    document.getElementById('adv').oninput = calculateAndSetRemainingAmount;
+
+    // Trigger the calculation on page load
+    window.onload = function() {
+        calculateAndSetRemainingAmount();
+    };
+</script>
+
 
 
 </body>

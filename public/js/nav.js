@@ -3,8 +3,7 @@ const createNav =() =>{
 
     nav.innerHTML =`
     <div class="nav">
-    <img src="../img/rpb.png" class="brand-logo" alt="">
-    <img src="../img/rangoli.png" class="brand-logo2" alt="">
+    <h1 style="font-weight:600; font-size:40px; color: #ECE5C7">-Rangoli Palace-</h1>
     <div class="nav-items"></div>
 </div>
 <ul class="links-container">

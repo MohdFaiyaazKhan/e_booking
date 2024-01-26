@@ -40,6 +40,9 @@ const bookingSchema = new mongoose.Schema({
     },
     rem: {
         type: Number,
+        default: function() {
+            return this.total - this.adv;
+        },
         required: true
     }
 })

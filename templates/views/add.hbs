@@ -19,10 +19,12 @@
 
   <div class="add">
     <form action="/index" method="POST">
-          <h1 style="text-decoration: underline; font-weight: 600">Add Record</h1>
+          <h2 style="text-decoration: underline; font-weight: 600; color:#116A7B">Add Record</h2>
       <input type="text" autocomplete="off" id="pname" placeholder="Party name" name="pname">
       <input type="text" autocomplete="off" id="fname" placeholder="Function name" name="fname">
+      <label >Date:</label>
       <input type="date" autocomplete="off" id="date" placeholder="Date" name="date">
+      <label>Time:</label>
       <input type="time" autocomplete="off" id="time" placeholder="Time" name="time">
       <input type="number" autocomplete="off" id="bill" placeholder="Bill No." name="bill"  onblur="checkBillNumberAvailability()">
       <div id="message"></div>
@@ -30,7 +32,7 @@
       <input type="number" autocomplete="off" id="ph" placeholder="Phone No." name="ph">
       <input type="number" autocomplete="off" id="total" placeholder="Total Amount" name="total">
       <input type="number" autocomplete="off" id="adv" placeholder="Paid Amount" name="adv">
-      <input type="number" autocomplete="off" id="rem" placeholder="Remaining Amount" name="rem">
+      {{!-- <input type="number" autocomplete="off" id="rem" placeholder="Remaining Amount" name="rem"> --}}
 
       <input type="submit" class="submit-btn" value="Add"></input>
     </form>

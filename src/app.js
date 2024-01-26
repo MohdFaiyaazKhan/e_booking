@@ -48,7 +48,7 @@ app.get('/index', async (req, res) => {
         $sort: { convertedDate: 1 } // Sort by date in ascending order
       },
       {
-        $limit: 2 // Limit the results to 5 upcoming dates (adjust as needed)
+        $limit: 5 // Limit the results to 5 upcoming dates (adjust as needed)
       }
     ]);
     // console.log(upcomingDates)
@@ -82,7 +82,7 @@ app.get('/', async (req, res) => {
         $sort: { convertedDate: 1 } // Sort by date in ascending order
       },
       {
-        $limit: 2 // Limit the results to 5 upcoming dates (adjust as needed)
+        $limit: 5 // Limit the results to 5 upcoming dates (adjust as needed)
       }
     ]);
 

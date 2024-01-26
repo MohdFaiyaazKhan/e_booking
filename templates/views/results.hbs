@@ -22,7 +22,7 @@
 
     <div class="result">
 
-        <h1 style="text-decoration: underline; font-weight: 600">Search Results</h1>
+        <h2 style="text-decoration: underline; font-weight: 600; color:#116A7B">Search Results</h2>
 
         <table>
             {{#each bookingregisters}}
@@ -55,16 +55,16 @@
                 <td>{{this.ph}}</td>
             </tr>
             <tr>
-                <th style="color: darkblue;">Total Amount</th>
+                <th>Total Amount</th>
                 <td>{{this.total}}</td>
             </tr>
             <tr>
-                <th style="color: darkgreen;">Paid Amount</th>
+                <th>Paid Amount</th>
                 <td>{{this.adv}}</td>
             </tr>
             <tr>
-                <th style="color: darkred;">Remaining Amount</th>
-                <td>{{this.rem}}</td>
+                <th>Remaining Amount</th>
+                <td style="color: darkred; font-weight: 600">{{this.rem}}</td>
             </tr>
             <tr>
                 <th>==================</th>
